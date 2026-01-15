@@ -4,12 +4,12 @@ import DetailsNav from './PokemonDetails/DetailsNav';
 import useDetail from './PokemonDetails/hooks/useDetail';
 
 const PokemonDetail = () => {
-    
-   const { pokemon, pokemonId, species, abilityDesc, evolutionLevel, loading, fetchData } = useDetail();
 
-   useEffect(() => {
-       fetchData();
-   }, []);
+    const { pokemon, pokemonId, species, abilityDesc, evolutionLevel, loading, fetchData } = useDetail();
+
+    useEffect(() => {
+        fetchData();
+    }, [pokemonId]);
 
     if (loading || !pokemon) return <div className="h-full w-full bg-cyan-400 text-white flex items-center justify-center font-bold animate-pulse">LOADING DATA...</div>;
 
@@ -21,7 +21,7 @@ const PokemonDetail = () => {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,transparent_0%,rgba(6,182,212,0.5)_100%)] pointer-events-none"></div>
 
             {/* Nav Header */}
-            <DetailsNav pokemonId={pokemonId} pokemonName={pokemon.name}/>
+            <DetailsNav pokemonId={pokemonId} pokemonName={pokemon.name} />
 
             {/* Main Content Grid */}
             <div className="flex flex-1 p-2 gap-2 overflow-hidden items-stretch relative z-10">

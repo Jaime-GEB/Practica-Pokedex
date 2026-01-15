@@ -55,6 +55,13 @@ export const pokeApi = {
     },
 
     /**
+     * Get Item details
+     */
+    getItem: async <T = any>(nameOrId: string | number): Promise<T> => {
+        return pokeApi.get<T>(`/item/${nameOrId}`);
+    },
+
+    /**
      * Get a list of Types
      */
     getTypesList: async <T = any>(): Promise<T> => {

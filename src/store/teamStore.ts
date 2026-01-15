@@ -17,6 +17,9 @@ interface TeamStore {
     addToTeam: (pokemon: TeamPokemon) => boolean;
     removeFromTeam: (index: number) => void;
     setItem: (index: number, item: string | null) => void;
+    updatePokemon: (index: number, updates: Partial<TeamPokemon>) => void;
+    selectedMemberIndex: number | null;
+    setSelectedMember: (index: number | null) => void;
     clearTeam: () => void;
 }
 
@@ -56,6 +59,18 @@ export const useTeamStore = create<TeamStore>()(
                     set({ party: newParty });
                 }
             },
+
+            updatePokemon: (index: number, updates: Partial<TeamPokemon>) => {
+                const { party } = get();
+                if (index >= 0 && index < 6 && party[index]) {
+                    const newParty = [...party];
+                    newParty[index] = { ...party[index]!, ...updates };
+                    set({ party: newParty });
+                }
+            },
+
+            selectedMemberIndex: null,
+            setSelectedMember: (index: number | null) => set({ selectedMemberIndex: index }),
 
             clearTeam: () => set({ party: Array(6).fill(null) })
         }),

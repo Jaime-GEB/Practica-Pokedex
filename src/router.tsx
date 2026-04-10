@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         path: '/attacks',
         element: <PokedexLayout topScreen={<AttacksList />} bottomScreen={<BottomCarousel />} />
     }
-]);
+], { basename: '/Practica-Pokedex' });
 
 const AppRouter = () => {
     return <RouterProvider router={router} />;

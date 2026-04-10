@@ -20,7 +20,7 @@ export default function PokedexLayout({
           {/* The "Ear" - Left protrusion */}
           <div className="absolute -left-36 bottom-10 w-25 h-50 bg-red-600 rounded-l-[10rem] border-l-4 border-t-4 border-b-4 border-red-800 flex flex-col justify-center items-center gap-2 pl-2 shadow-lg">
             {/* Speaker Holes */}
-            <div className="grid grid-cols-2 gap-2 left-7 gap-10 rotate-45 relative z-22">
+            <div className="grid grid-cols-2 left-7 gap-10 rotate-45 relative z-22">
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
@@ -53,10 +53,10 @@ export default function PokedexLayout({
 
 
         {/* --- HINGE --- */}
-        <div className="w-120 h-8 bg-gradient-to-b from-red-700 via-red-500 to-red-700 border-x-4 border-red-800 z-10 relative shadow-inner flex items-center justify-center">
-          <div className="w-40 h-8 bg-gradient-to-b from-red-700 via-red-500 to-red-700 border-l-4 border-red-800 z-10 relative shadow-inner flex flex-start" />
+        <div className="w-120 h-8 bg-linear-to-b from-red-700 via-red-500 to-red-700 border-x-4 border-red-800 z-10 relative shadow-inner flex items-center justify-center">
+          <div className="w-40 h-8 bg-linear-to-b from-red-700 via-red-500 to-red-700 border-l-4 border-red-800 z-10 relative shadow-inner flex flex-start" />
           <div className="w-1 h-3 bg-black rounded-[0.1rem] opacity-70"></div>
-          <div className="w-40 h-8 bg-gradient-to-b from-red-700 via-red-500 to-red-700 border-r-4 border-red-800 z-10 relative shadow-inner flex flex-end" />
+          <div className="w-40 h-8 bg-linear-to-b from-red-700 via-red-500 to-red-700 border-r-4 border-red-800 z-10 relative shadow-inner flex flex-end" />
         </div>
 
 
@@ -98,7 +98,7 @@ export default function PokedexLayout({
             {/* Screen Container Right */}
             <div className="absolute right-6 top-7 w-30 h-55 bg-zinc-800 border-2 border-red-900 rounded-br-4xl rounded-tr-lg z-21 shadow-2xl" />
             {/* Screen Container Container */}
-            <div className="absolute -top-0 w-99 p-4 ml-3 rounded z-22">
+            <div className="absolute top-0 w-99 p-4 ml-3 rounded z-22">
               {/* Screen Container Container Contorn */}
               <div className="bg-zinc-300 p-2 rounded-lg border-2 border-zinc-600 relative z-22">
                 {/* Actual Screen */}

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* Responsive defaults */
+/* 200% zoom by default */
 html {
-  font-size: clamp(14px, 2vw, 16px);
+  font-size: 32px;
 }
 
 :root {

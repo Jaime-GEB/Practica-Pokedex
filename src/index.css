@@ -80,33 +80,11 @@ body::after {
   z-index: 2;
 }
 
-/* Responsive zoom levels based on screen size */
-@media (max-width: 640px) {
-  /* Mobile: 100% (1rem = 16px) */
-  html {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-  /* Tablet small: 125% (1rem = 20px) */
-  html {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Tablet: 150% (1rem = 24px) */
-  html {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1025px) {
-  /* Desktop: 200% (1rem = 32px) */
-  html {
-    font-size: 32px;
-  }
+/* Responsive sizing with clamp for smooth scaling */
+html {
+  /* Scales from 14px on mobile to 32px on desktop, smoothly */
+  font-size: clamp(14px, 2vw, 32px);
+  scroll-behavior: smooth;
 }
 
 :root {

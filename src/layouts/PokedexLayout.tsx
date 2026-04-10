@@ -10,7 +10,7 @@ export default function PokedexLayout({
   bottomScreen,
 }: PokedexLayoutProps) {
   return (
-    <div className="min-h-screen bg-zinc-900 flex items-center justify-center p-2 sm:p-4 font-sans overflow-hidden">
+    <div className="min-h-screen bg-transparent flex items-center justify-center p-2 sm:p-4 font-sans overflow-hidden">
 
       {/* Pokedex Container - Responsive without scaling */}
       <div className="flex flex-col items-center relative w-full max-w-3xl">

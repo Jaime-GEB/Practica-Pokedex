@@ -5,34 +5,33 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '320px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       spacing: {
-        // Custom responsive sizes for Pokedex container
-        'pokedex-w': 'clamp(280px, 95vw, 480px)',
-        'pokedex-h': 'clamp(180px, 60vw, 280px)',
-        'screen-w': 'clamp(240px, 85vw, 432px)',
-        'screen-h': 'clamp(120px, 45vw, 192px)',
+        // Pokedex container in rem (base 16px, but html is 32px for 200% zoom)
+        '25': '6.25rem',    // 100px at normal, 200px at 200%
+        '30': '7.5rem',     // 120px at normal, 240px at 200%
+        '40': '10rem',      // 160px at normal, 320px at 200%
+        '50': '12.5rem',    // 200px at normal, 400px at 200%
+        '55': '13.75rem',   // 220px at normal, 440px at 200%
+        '70': '17.5rem',    // 280px at normal, 560px at 200%
+        '95': '23.75rem',   // 380px at normal, 760px at 200%
+        '100': '25rem',     // 400px at normal, 800px at 200%
+        '108': '27rem',     // 432px at normal, 864px at 200%
+        '120': '30rem',     // 480px at normal, 960px at 200%
       },
       fontSize: {
-        // Responsive font sizes
-        'xs-responsive': 'clamp(6px, 1.5vw, 10px)',
-        'sm-responsive': 'clamp(8px, 2vw, 12px)',
-        'base-responsive': 'clamp(10px, 2.5vw, 14px)',
-      },
-      width: {
-        '25': '100px',
-        '30': '120px',
-        '32': '128px',
-        '40': '160px',
-        '100': '400px',
-        '108': '432px',
-        '120': 'clamp(280px, 95vw, 480px)',
-      },
-      height: {
-        '50': '200px',
-        '55': '220px',
-        '70': 'clamp(180px, 60vw, 280px)',
-        '48': '192px',
+        // Responsive font sizes in rem
+        'xs-responsive': '0.375rem',   // 6px
+        'sm-responsive': '0.5rem',     // 8px
+        'base-responsive': '0.625rem', // 10px
       },
       borderRadius: {
         '10rem': '10rem',
@@ -45,3 +44,4 @@ export default {
   },
   plugins: [],
 }
+

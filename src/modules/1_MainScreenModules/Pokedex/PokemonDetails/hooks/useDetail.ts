@@ -6,12 +6,11 @@ import {
     type SpeciesData,
     type AbilityData,
     type EvolutionChainNode
-} from '../../../../../types/types';
+} from '../../../../../types/typeFile';
 
 const findNextEvolutionLevel = (node: EvolutionChainNode, currentName: string): number | null => {
 
     if (node.species.name === currentName) {
-         
         if (node.evolves_to.length > 0) {
             const levelUp = node.evolves_to.find(evo => evo.evolution_details[0]?.min_level);
             return levelUp?.evolution_details[0]?.min_level || null;

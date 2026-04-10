@@ -13,7 +13,7 @@ const PokemonDetail = () => {
 
     if (loading || !pokemon) return <div className="h-full w-full bg-cyan-400 text-white flex items-center justify-center font-bold animate-pulse">LOADING DATA...</div>;
 
-    const flavorText = species?.flavor_text_entries.find(e => e.language.name === 'en')?.flavor_text.replaceAll(/\f/g, ' ') || "No data.";
+    const flavorText = species?.flavor_text_entries.find((e: any) => e.language.name === 'en')?.flavor_text.replaceAll(/\f/g, ' ') || "No data.";
 
     return (
         <div className="h-full w-full bg-cyan-400 relative overflow-hidden flex flex-col font-sans text-white select-none">
@@ -55,7 +55,7 @@ const PokemonDetail = () => {
                 <div className="flex-1 flex flex-col h-full justify-between">
                     {/* TYPES */}
                     <div className="flex items-center justify-end mr-2 gap-x-1 z-25">
-                        {pokemon.types.map(({ type: { name } }) => (
+                        {pokemon.types.map(({ type: { name } }: any) => (
                             <span key={name} className={`${getTypeColor(name)} px-1 rounded-full text-[7px] border border-white uppercase`}>
                                 {name}
                             </span>

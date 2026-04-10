@@ -18,22 +18,21 @@ export default function PokedexLayout({
         {/* --- TOP HALF --- */}
         <div className="relative z-20">
           {/* The "Ear" - Left protrusion */}
-          <div className="absolute -left-36 bottom-10 w-25 h-50 bg-red-600 rounded-l-[10rem] border-l-4 border-t-4 border-b-4 border-red-800 flex flex-col justify-center items-center gap-2 pl-2 shadow-lg">
+          <div className="absolute -left-36 bottom-10 w-25 h-50 bg-red-600 rounded-l-[10rem] border-l-4 border-t-4 border-b-4 border-red-800 flex flex-col justify-center items-center gap-2 pl-2 shadow-lg overflow-hidden">
             {/* Speaker Holes */}
-            <div className="grid grid-cols-2 gap-2 left-7 gap-10 rotate-45 relative z-22">
+            <div className="grid grid-cols-2 left-7 gap-10 rotate-45 relative z-22">
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
               <div className="w-2.5 h-2.5 bg-red-900 rounded-full inset-shadow z-22"></div>
             </div>
             {/* Ear Connector to Body */}
-            <div className="absolute -right-12 top-0. w-12 h-50 bg-red-600 border-t-4 border-b-4 border-red-800 z-21" />
           </div>
-
+          <div className="absolute -left-12 bottom-10 w-13 h-50 bg-red-600 border-t-4 border-b-4 border-red-800 z-21" />
           {/* Main Top Body */}
-          <div className="w-120 h-70 bg-red-600 rounded-tl-lg rounded-tr-3xl border-4 border-red-800 p-4 relative shadow-xl z-20">
+          <div className="w-120 h-70 bg-red-600 rounded-tl-lg rounded-tr-3xl border-4 border-red-800 p-4 relative shadow-xl z-20 overflow-hidden">
             {/* Screen Bezel */}
-            <div className="absolute right-5 top-10 w-108 h-50 bg-zinc-800 border-2 border-zinc-900 rounded-lg z-21" />
+            <div className="absolute right-5 top-10 w-108 h-50 bg-zinc-800 border-2 border-zinc-900 rounded-lg z-21 overflow-hidden" />
             <div className="w-100 p-4 ml-2 rounded z-22">
               <div className="bg-zinc-300 p-2 rounded-lg shadow-2xl border-2 border-zinc-600 relative z-22">
                 {/* Top Camera/Mic */}
@@ -63,7 +62,7 @@ export default function PokedexLayout({
         {/* --- BOTTOM HALF --- */}
         <div className="relative z-20">
           {/* The "Handle" - Left Control Grip */}
-          <div className="absolute -left-40 top-0 w-40 h-full bg-zinc-700 rounded-l-[15rem] border-3 border-y-3 border-zinc-800 inset-shadow-2xl flex items-center justify-center">
+          <div className="absolute -left-40 top-0 w-40 h-full bg-zinc-700 rounded-l-[15rem] border-3 border-y-3 border-zinc-800 inset-shadow-2xl flex items-center justify-center overflow-hidden">
             <div className="absolute left-18 top-19 w-30 h-30 bg-zinc-700 rounded-[10rem] border-3 border-y-3 border-zinc-900 inset-shadow-2xl flex items-center justify-center z-22">
               {/* D-Pad */}
               <div className="relative w-16 h-16">
@@ -89,7 +88,7 @@ export default function PokedexLayout({
 
 
           {/* Main Bottom Body */}
-          <div className="w-120 h-70 bg-red-600 rounded-br-3xl border-t-3 border-r-3 border-b-3 border-red-800 p-4 shadow-xl relative z-10">
+          <div className="w-120 h-70 bg-red-600 rounded-br-3xl border-t-3 border-r-3 border-b-3 border-red-800 p-4 shadow-xl relative z-10 overflow-hidden">
 
             {/* Bottom Screen Container */}
             <div className="absolute right-155 top-32 w-4 h-4 bg-green-500 rounded-l-[15%] z-24 shadow-[0_0_10px_#22c55e]" />
